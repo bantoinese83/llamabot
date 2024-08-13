@@ -17,7 +17,7 @@ interacting with large language models, including features like speech-to-text, 
 1. **Clone the Repository:**
 
 ```bash
-   git clone https://github.com/your-username/llamabot.git 
+   git clone https://github.com/bantoinese83/llamabot.git 
 ```
 
 2. **Install Dependencies:**
