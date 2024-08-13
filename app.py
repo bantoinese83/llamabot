@@ -46,7 +46,7 @@ class ChatMessage(Base):
     role = Column(String)
     content = Column(String)
     timestamp = Column(DateTime)
-    model_id = Column(String)  # Add model_id to the table
+    model_id = Column(String)
 
 
 class Feedback(Base):
@@ -400,12 +400,12 @@ def main():
         # Use Unicode characters for thumbs up/down instead of emojis
         col1, col2 = st.columns(2)
         with col1:
-            if st.button("👍", key=f"positive_feedback_{chat_message_id}"):  # Unicode thumbs up
+            if st.button("👍", key=f"positive_feedback_{chat_message_id}"):
                 st_lottie(LOTTIE_SUCCESS_URL, height=100, width=100, key="positive_feedback")
                 comment = st.text_input(f"Feedback for message {chat_message_id}")
                 save_feedback(chat_message_id, True, comment)
         with col2:
-            if st.button("👎", key=f"negative_feedback_{chat_message_id}"):  # Unicode thumbs down
+            if st.button("👎", key=f"negative_feedback_{chat_message_id}"):
                 st_lottie(LOTTIE_ERROR_URL, height=100, width=100, key="negative_feedback")
                 comment = st.text_input(f"Feedback for message {chat_message_id}")
                 save_feedback(chat_message_id, False, comment)
